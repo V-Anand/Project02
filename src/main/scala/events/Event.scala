@@ -1,5 +1,6 @@
 package events
 
+import java.time.LocalDateTime
 import java.util.UUID
 
 trait Event {
@@ -8,7 +9,7 @@ trait Event {
   def getTenantId : String
   def getActorUuid : UUID
   def getType : String
-  def getProperties : String
-  def getOccurrenceTime : String
-  def getIngestionTime : String
+  def getProperties : Map[String, String]
+  def getOccurrenceTime : LocalDateTime
+  def getIngestionTime : LocalDateTime
 }
