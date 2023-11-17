@@ -1,12 +1,25 @@
 #!/usr/bin/env python
 def genAdapter(name):
-  className = "%sAdapter" % name
+  comment = '''
+  Convert the interface of one class into another interface that clients expect
+  '''
+  usecase = '''
+  Integrating legacy systems, making incompatible classes work together
+  '''
+
+def genBridge(name):
+  comment = '''
+  Decouple an abstraction from its implementation, allowing them to vary independently
+  '''
+  usecase = '''
+  '''
   
-def generate(type, name):
+def generate(type, prefix):
   if type == None:
     type = 'Adapter'
-  if name == None:
-    name = 'Example'
+  if prefix == None:
+    prefix = 'Example'
+  name = "%s%s" % (prefix, type)  
   if type == 'Adapter':
     genAdapter(name)
   elif type == 'Bridge':
