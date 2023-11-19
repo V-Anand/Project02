@@ -12,6 +12,46 @@ def genBridge(name):
   Decouple an abstraction from its implementation, allowing them to vary independently
   '''
   usecase = '''
+  Separating an abstraction from its implementation, supporting multiple implementations of an abstraction
+  '''
+def genDecorator(name):
+  comment = '''
+  Dynamically add new behaviors to an object by wrapping it with one or more decorators
+  '''
+  usecase = '''
+  Adding additional features or responsibilities to an object without modifying its core functionality
+  '''
+
+def genComposite(name):
+  comment = '''
+  Compose objects into tree-like structures to represent part-whole hierarchies
+  '''
+  usecase = '''
+  Representing hierarchies of objects, treating individual objects and compositions uniformly
+  '''
+
+def genFacade(name):
+  comment = '''
+  Provide a simplified interface to a complex system or set of classes
+  '''
+  usecase = '''
+  Hiding complex subsystems, providing a higher-level interface for clients
+  '''
+
+def genFlyweight(name):
+  comment = '''
+  Efficiently share objects to minimize memory usage
+  '''
+  usecase = '''
+  Managing large numbers of similar objects with shared state
+  '''
+
+def genProxy(name):
+  comment = '''
+  Control access to an object or add functionality through an intermediary object
+  '''
+  usecase='''
+  Access control, lazy initialiation, remote communications, caching, loggine.
   '''
   
 def generate(type, prefix):
